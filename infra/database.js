@@ -18,6 +18,14 @@ async function query(queryObject) {
 }
 
 async function getNewClient() {
+  console.log({
+    NODE_ENV: process.env.NODE_ENV,
+    POSTGRES_HOST: process.env.POSTGRES_HOST,
+    POSTGRES_PORT: process.env.POSTGRES_PORT,
+    POSTGRES_DB: process.env.POSTGRES_DB,
+    POSTGRES_USER: process.env.POSTGRES_USER,
+  });
+
   const client = new Client({
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
